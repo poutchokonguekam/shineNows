@@ -72,8 +72,9 @@ main {
 }
 
 .logo-icon {
-  width: 42px;
+  width: 45px;
   height: auto;
+  display: block;
 }
 
 .logo-text {
@@ -514,9 +515,6 @@ textarea {
 }
 
 .footer-logo {
-  width: 140px;
-  height: auto;
-  display: block;
   margin-bottom: 1rem;
 }
 
@@ -528,7 +526,7 @@ textarea {
 }
 
 .footer-logo img {
-  width: 140px;
+  width: 120px;
   height: auto;
   display: block;
 }

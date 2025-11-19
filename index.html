@@ -3,24 +3,24 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Agence web premium sans prix affichés : focus sur la valeur, la conversion et le multilingue.'>
-  <title>ShineNows | Agence web premium</title>
+  <meta name='description' content='Agence web premium ShineNows - sites multilingues sans prix affichés.'>
+  <title>ShineNows | Home</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
 <body>
-<header class='glass-header'>
+<header class='header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/' class='logo-wrapper'>
+      <a href='/' class='logo'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
-      <nav>
+      <nav class='main-nav'>
         <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
       </nav>
-      <div class='language-selector'><span>FR</span> · <a href="/en/">EN</a> · <a href="/de/">DE</a></div>
-      <div class='mobile-menu'>☰</div>
+      <div class='lang-switch'><span>FR</span> · <a href='/en/'>EN</a> · <a href='/de/'>DE</a></div>
+      <button class='menu-toggle' aria-label='Menu'>☰</button>
     </div>
   </div>
 </header>
@@ -29,81 +29,147 @@
   <div class='container'>
     <div class='hero-content'>
       <h1>ShineNows conçoit des expériences web sur mesure qui convertissent</h1>
-      <p>Sites vitrines et plateformes sur mesure, multilingues, éco-performantes et pensées pour la conversion.</p>
+      <p>Sites vitrines, plateformes sur mesure et parcours clients pensés pour la conversion multilingue.</p>
       <div class='hero-actions'>
-        <a href='/devis/' class='btn btn-primary'>Demander un devis</a>
-        <a href='/portfolio/' class='btn btn-secondary'>Découvrir nos réalisations</a>
+        <a class='btn' href='/devis/'>Demander un devis</a>
+        <a class='btn btn-outline' href='/portfolio/'>Découvrir nos réalisations</a>
       </div>
-      <div class='hero-stats'>
-        <div class='stat'>
-          <div class='stat-number' data-count='120'>0</div>
-          <div class='stat-label'>projets déployés</div>
-        </div>
-        <div class='stat'>
-          <div class='stat-number' data-count='98'>0</div>
-          <div class='stat-label'>% de satisfaction</div>
-        </div>
-        <div class='stat'>
-          <div class='stat-number' data-count='3'>0</div>
-          <div class='stat-label'>langues livrées</div>
-        </div>
+      <ul class='hero-points'>
+        <li>Multilingue natif</li><li>SEO & performance inclus</li><li>Support senior dédié</li>
+      </ul>
+      <div class='stats'>
+        <div class='stat'><strong data-count='120'>0</strong><span>projets déployés</span></div><div class='stat'><strong data-count='98'>0</strong><span>% de satisfaction</span></div><div class='stat'><strong data-count='12'>0</strong><span>pays livrés</span></div>
       </div>
     </div>
     <div class='hero-visual'>
-      <img src='/assets/images/logo/shineNews-hero.webp' alt='Design web moderne'>
+      <img src='/assets/images/logo/shineNews-hero.webp' alt='ShineNows hero'>
     </div>
   </div>
 </section>
-<section class='services-preview'>
+<section class='section'>
   <div class='container'>
-    <h2>Nos Domaines d'Expertise</h2>
-    <div class='preview-grid'>
+    <div class='section-heading'>
+      <h2>Nos services web</h2>
+      <p>Des prestations qualitatives, sans grille de prix publique.</p>
+    </div>
+    <div class='cards-grid'>
       
-      <div class='preview-card'>
+      <div class='card'>
         <div class='preview-icon'>🚀</div>
         <h3>Hébergement & Maintenance</h3>
-        <p>Solutions complètes pour une présence en ligne fiable et performante</p>
+        <p>Surveillance proactive, mises à jour pilotées et support direct.</p>
       </div>
         
-      <div class='preview-card'>
+      <div class='card'>
         <div class='preview-icon'>💼</div>
-        <h3>Création de Sites</h3>
-        <p>Identités digitales uniques, prêtes à convaincre vos prospects</p>
+        <h3>Sites Vitrine</h3>
+        <p>Présence haut de gamme pour entrepreneurs et studios.</p>
       </div>
         
-      <div class='preview-card'>
+      <div class='card'>
         <div class='preview-icon'>🛒</div>
         <h3>E-commerce</h3>
-        <p>Boutiques en ligne sécurisées qui transforment la visite en achat</p>
+        <p>Boutiques fluides, sécurisées et prêtes à scaler.</p>
       </div>
         
     </div>
-    <div class='preview-cta' style='margin-top:2rem;'>
-      <a href='/services/' class='btn'>Découvrir tous nos services</a>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Nos réalisations</h2>
+      <p>Sites premium réalisés sans compromis.</p>
+    </div>
+    <div class='portfolio-grid'>
+      
+      <div class='project-card'>
+        <img src='/assets/images/logo/project-01.webp' alt='Maison Aube'>
+        <span class='project-tag'>Luxury · Multilingue</span>
+        <div class='project-overlay'>
+          <h3>Maison Aube</h3>
+          <p>Site vitrine immersif pour une maison créative parisienne.</p>
+          <a class='btn btn-outline' href='#'>Voir le projet</a>
+        </div>
+      </div>
+        
+      <div class='project-card'>
+        <img src='/assets/images/logo/project-02.webp' alt='Cabinet Gloria'>
+        <span class='project-tag'>Santé · SEO</span>
+        <div class='project-overlay'>
+          <h3>Cabinet Gloria</h3>
+          <p>Site médical rassurant avec réservation intégrée.</p>
+          <a class='btn btn-outline' href='#'>Voir le projet</a>
+        </div>
+      </div>
+        
+      <div class='project-card'>
+        <img src='/assets/images/logo/project-03.webp' alt='Atlas Legal'>
+        <span class='project-tag'>Legal · B2B</span>
+        <div class='project-overlay'>
+          <h3>Atlas Legal</h3>
+          <p>Cabinet international avec tunnels de contact.</p>
+          <a class='btn btn-outline' href='#'>Voir le projet</a>
+        </div>
+      </div>
+        
+      <div class='project-card'>
+        <img src='/assets/images/logo/project-04.webp' alt='Helios Fit'>
+        <span class='project-tag'>Coaching · Commerce</span>
+        <div class='project-overlay'>
+          <h3>Helios Fit</h3>
+          <p>Plateforme de réservation et abonnement premium.</p>
+          <a class='btn btn-outline' href='#'>Voir le projet</a>
+        </div>
+      </div>
+        
     </div>
   </div>
 </section>
-<section>
-  <div class='container' style='display:grid;gap:2rem;'>
-    <div>
-      <h2>Méthode ShineNows</h2>
-      <p>Audit, design system, développement puis accompagnement : une seule équipe pilote chaque étape.</p>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Blog & Insights</h2>
+      <p>Une veille premium pour préparer votre projet.</p>
     </div>
-    <ul style='list-style:none;display:grid;gap:0.75rem;'>
-      <li>Immersion stratégique et collecte des assets</li><li>Design system premium et prototypes interactifs</li><li>Développement rapide, SEO-ready</li><li>Run & Care : monitoring, évolutions, contenu</li>
-    </ul>
+    <div class='cards-grid'>
+      
+      <div class='blog-card'>
+        <span>Insight</span>
+        <h3>Structurer un site vitrine</h3>
+        <p>Les 4 sections indispensables pour convaincre.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
+      </div>
+        
+      <div class='blog-card'>
+        <span>Insight</span>
+        <h3>SEO 2025</h3>
+        <p>Checklist technique pour rester visible.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
+      </div>
+        
+      <div class='blog-card'>
+        <span>Insight</span>
+        <h3>Automatiser le suivi</h3>
+        <p>CRM, messaging et workflows synchronisés.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
+      </div>
+        
+    </div>
   </div>
 </section>
-<section>
-  <div class='container' style='text-align:center;'>
-    <h2>Prêt à accélérer ?</h2>
-    <p style='color:var(--text-gray);margin:1rem auto 2rem;max-width:620px;'>Décrivez vos objectifs, nous construisons le plan pour vous.</p>
-    <a href='/devis/' class='btn'>Démarrer mon projet</a>
+<section class='section'>
+  <div class='container'>
+    <div class='cta-panel'>
+      <h2>Prêt à collaborer ?</h2>
+      <p style='color:var(--text-gray);margin:1rem 0 1.5rem;'>Expliquez votre ambition et recevez un plan précis sous 24h.</p>
+      <a class='btn' href='/devis/'>Planifier un échange</a>
+    </div>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -112,11 +178,11 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="/services#hosting">Hébergement & Maintenance</a>
-        <a href="/services#vitrine">Sites Vitrine</a>
-        <a href="/services#ecommerce">E-commerce</a>
-        <a href="/services#refonte">Refonte de Site</a>
-        <a href="/services#seo">SEO & Performance</a>
+        <a href="/services/#hosting">Hébergement & Maintenance</a>
+        <a href="/services/#vitrine">Sites Vitrine</a>
+        <a href="/services/#commerce">E-commerce</a>
+        <a href="/services/#refonte">Refonte stratégique</a>
+        <a href="/services/#seo">SEO & Performance</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -129,9 +195,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Shinenows. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2025 ShineNows. Tous droits réservés.</div>
   </div>
 </footer>
 

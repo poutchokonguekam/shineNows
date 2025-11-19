@@ -3,68 +3,112 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Aktuelle Referenzen für Unternehmer und Marken.'>
-  <title>ShineNows Referenzen</title>
+  <meta name='description' content='ShineNows Referenzen für anspruchsvolle Marken.'>
+  <title>ShineNows | Portfolio</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
 <body>
-<header class='glass-header'>
+<header class='header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/de/' class='logo-wrapper'>
+      <a href='/de/' class='logo'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
-      <nav>
-        <a href='/de/'>Start</a><a href='/services/de.html'>Leistungen</a><a href='/portfolio/de.html'>Referenzen</a><a href='/blog/de/'>Blog</a><a href='/devis/de.html'>Angebot</a><a href='/contact/de.html'>Kontakt</a>
+      <nav class='main-nav'>
+        <a href='/de/'>Start</a><a href='/services/de.html'>Leistungen</a><a href='/portfolio/de.html'>Referenzen</a><a href='/blog/de.html'>Blog</a><a href='/devis/de.html'>Angebot</a><a href='/contact/de.html'>Kontakt</a>
       </nav>
-      <div class='language-selector'><a href="/">FR</a> · <a href="/en/">EN</a> · <span>DE</span></div>
-      <div class='mobile-menu'>☰</div>
+      <div class='lang-switch'><a href='/portfolio/'>FR</a> · <a href='/portfolio/en.html'>EN</a> · <span>DE</span></div>
+      <button class='menu-toggle' aria-label='Menu'>☰</button>
     </div>
   </div>
 </header>
 <main>
-<section class='portfolio-section'>
+<section class='hero'>
   <div class='container'>
-    <h1>Unsere Referenzen</h1>
-    <p>Entdecken Sie Premium-Websites für Unternehmer und KMU.</p>
+    <div class='hero-content'>
+      <h1>Jedes Projekt erzählt eine starke Geschichte</h1>
+      <p>Ausgewählte Launches für Studios, Gründer und Kanzleien in Europa.</p>
+      <div class='hero-actions'>
+        <a class='btn' href='/devis/de.html'>Projekt besprechen</a>
+        <a class='btn btn-outline' href='/services/de.html'>Unsere Methoden</a>
+      </div>
+      <ul class='hero-points'>
+        <li>Mehrsprachig nativ</li><li>SEO & Performance inklusive</li><li>Senior-Ansprechpartner</li>
+      </ul>
+      <div class='stats'>
+        <div class='stat'><strong data-count='120'>0</strong><span>Projekte gelauncht</span></div><div class='stat'><strong data-count='98'>0</strong><span>Kundenzufriedenheit</span></div><div class='stat'><strong data-count='12'>0</strong><span>Länder beliefert</span></div>
+      </div>
+    </div>
+    <div class='hero-visual'>
+      <img src='/assets/images/logo/shineNews-hero.webp' alt='ShineNows hero'>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Referenzen</h2>
+      <p>Premium-Websites ohne Kompromisse.</p>
+    </div>
     <div class='portfolio-grid'>
       
       <div class='project-card'>
         <img src='/assets/images/logo/project-01.webp' alt='Maison Aube'>
-        <h3>Maison Aube</h3>
-        <p>Premium-Auftritt für ein Juwelierhaus mit Storytelling und flexiblem Katalog.</p>
-        <a href='/devis/de.html' class='btn'>Projekt besprechen</a>
+        <span class='project-tag'>Luxury · Multilingue</span>
+        <div class='project-overlay'>
+          <h3>Maison Aube</h3>
+          <p>Immersiver Auftritt für ein Pariser Kreativhaus.</p>
+          <a class='btn btn-outline' href='#'>Projekt ansehen</a>
+        </div>
       </div>
         
       <div class='project-card'>
-        <img src='/assets/images/logo/project-02.webp' alt='Cabinet Dentaire Gloria'>
-        <h3>Cabinet Dentaire Gloria</h3>
-        <p>Vertrauensvolle Praxis-Website mit Terminbuchung und Wissensbereich.</p>
-        <a href='/devis/de.html' class='btn'>Projekt besprechen</a>
+        <img src='/assets/images/logo/project-02.webp' alt='Praxis Gloria'>
+        <span class='project-tag'>Santé · SEO</span>
+        <div class='project-overlay'>
+          <h3>Praxis Gloria</h3>
+          <p>Medizinischer Auftritt mit Terminbuchung.</p>
+          <a class='btn btn-outline' href='#'>Projekt ansehen</a>
+        </div>
       </div>
         
       <div class='project-card'>
         <img src='/assets/images/logo/project-03.webp' alt='Atlas Legal'>
-        <h3>Atlas Legal</h3>
-        <p>Internationale Kanzlei: zweisprachige Seite, Kontaktfunnels und Kundenbereich.</p>
-        <a href='/devis/de.html' class='btn'>Projekt besprechen</a>
+        <span class='project-tag'>Legal · B2B</span>
+        <div class='project-overlay'>
+          <h3>Atlas Legal</h3>
+          <p>Internationale Kanzlei mit Kontaktfunnels.</p>
+          <a class='btn btn-outline' href='#'>Projekt ansehen</a>
+        </div>
       </div>
         
       <div class='project-card'>
         <img src='/assets/images/logo/project-04.webp' alt='Helios Fit'>
-        <h3>Helios Fit</h3>
-        <p>Coaching-Studio: Online-Termine, Memberships und CRM-Automation.</p>
-        <a href='/devis/de.html' class='btn'>Projekt besprechen</a>
+        <span class='project-tag'>Coaching · Commerce</span>
+        <div class='project-overlay'>
+          <h3>Helios Fit</h3>
+          <p>Buchungs- und Membership-Plattform.</p>
+          <a class='btn btn-outline' href='#'>Projekt ansehen</a>
+        </div>
       </div>
         
     </div>
   </div>
 </section>
+<section class='section'>
+  <div class='container'>
+    <div class='cta-panel'>
+      <h2>Bereit zur Zusammenarbeit?</h2>
+      <p style='color:var(--text-gray);margin:1rem 0 1.5rem;'>Teilen Sie Ihre Ziele und erhalten Sie innerhalb 24h einen Plan.</p>
+      <a class='btn' href='/devis/de.html'>Gespräch planen</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -73,11 +117,11 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="/services#hosting">Hébergement & Maintenance</a>
-        <a href="/services#vitrine">Sites Vitrine</a>
-        <a href="/services#ecommerce">E-commerce</a>
-        <a href="/services#refonte">Refonte de Site</a>
-        <a href="/services#seo">SEO & Performance</a>
+        <a href="/services/#hosting">Hébergement & Maintenance</a>
+        <a href="/services/#vitrine">Sites Vitrine</a>
+        <a href="/services/#commerce">E-commerce</a>
+        <a href="/services/#refonte">Refonte stratégique</a>
+        <a href="/services/#seo">SEO & Performance</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -90,9 +134,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Shinenows. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2025 ShineNows. Tous droits réservés.</div>
   </div>
 </footer>
 

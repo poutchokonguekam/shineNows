@@ -3,58 +3,93 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Conseils premium pour préparer votre site ShineNows.'>
-  <title>Blog ShineNows</title>
+  <meta name='description' content='Blog ShineNows - conseils experts.'>
+  <title>ShineNows | Blog</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
 <body>
-<header class='glass-header'>
+<header class='header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/' class='logo-wrapper'>
+      <a href='/' class='logo'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
-      <nav>
+      <nav class='main-nav'>
         <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
       </nav>
-      <div class='language-selector'><span>FR</span> · <a href="/en/">EN</a> · <a href="/de/">DE</a></div>
-      <div class='mobile-menu'>☰</div>
+      <div class='lang-switch'><span>FR</span> · <a href='/blog/en.html'>EN</a> · <a href='/blog/de.html'>DE</a></div>
+      <button class='menu-toggle' aria-label='Menu'>☰</button>
     </div>
   </div>
 </header>
 <main>
-<section class='blog-section'>
+<section class='hero'>
   <div class='container'>
-    <h1>Blog & Insights</h1>
-    <p>Analyse, méthodes et guides pour imaginer votre prochain site.</p>
-    <div class='blog-grid'>
+    <div class='hero-content'>
+      <h1>Conseils pratiques pour préparer votre site</h1>
+      <p>Contenus courts et applicables partagés avec nos clients avant chaque lancement.</p>
+      <div class='hero-actions'>
+        <a class='btn' href='/devis/'>Lire nos insights</a>
+        <a class='btn btn-outline' href='/contact/'>Prendre rendez-vous</a>
+      </div>
+      <ul class='hero-points'>
+        <li>Multilingue natif</li><li>SEO & performance inclus</li><li>Support senior dédié</li>
+      </ul>
+      <div class='stats'>
+        <div class='stat'><strong data-count='120'>0</strong><span>projets déployés</span></div><div class='stat'><strong data-count='98'>0</strong><span>% de satisfaction</span></div><div class='stat'><strong data-count='12'>0</strong><span>pays livrés</span></div>
+      </div>
+    </div>
+    <div class='hero-visual'>
+      <img src='/assets/images/logo/shineNews-hero.webp' alt='ShineNows hero'>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Blog & Insights</h2>
+      <p>Une veille premium pour préparer votre projet.</p>
+    </div>
+    <div class='cards-grid'>
       
       <div class='blog-card'>
-        <h3>Structurer un site vitrine qui convertit</h3>
-        <p>Un plan en 5 étapes pour clarifier votre message et accélérer la prise de contact.</p>
-        <a class='btn btn-secondary' href='/blog/article-1.html'>Lire</a>
+        <span>Insight</span>
+        <h3>Structurer un site vitrine</h3>
+        <p>Les 4 sections indispensables pour convaincre.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
       </div>
         
       <div class='blog-card'>
-        <h3>Les fondamentaux SEO 2025</h3>
-        <p>L’essentiel pour rester visible sans multiplier les outils.</p>
-        <a class='btn btn-secondary' href='/blog/article-2.html'>Lire</a>
+        <span>Insight</span>
+        <h3>SEO 2025</h3>
+        <p>Checklist technique pour rester visible.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
       </div>
         
       <div class='blog-card'>
-        <h3>Automatiser le suivi prospects</h3>
-        <p>Relier formulaires, CRM et messaging pour ne rien laisser passer.</p>
-        <a class='btn btn-secondary' href='/blog/article-3.html'>Lire</a>
+        <span>Insight</span>
+        <h3>Automatiser le suivi</h3>
+        <p>CRM, messaging et workflows synchronisés.</p>
+        <a class='btn btn-outline' href='#'>Lire l'article</a>
       </div>
         
     </div>
   </div>
 </section>
+<section class='section'>
+  <div class='container'>
+    <div class='cta-panel'>
+      <h2>Prêt à collaborer ?</h2>
+      <p style='color:var(--text-gray);margin:1rem 0 1.5rem;'>Expliquez votre ambition et recevez un plan précis sous 24h.</p>
+      <a class='btn' href='/devis/'>Planifier un échange</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -63,11 +98,11 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="/services#hosting">Hébergement & Maintenance</a>
-        <a href="/services#vitrine">Sites Vitrine</a>
-        <a href="/services#ecommerce">E-commerce</a>
-        <a href="/services#refonte">Refonte de Site</a>
-        <a href="/services#seo">SEO & Performance</a>
+        <a href="/services/#hosting">Hébergement & Maintenance</a>
+        <a href="/services/#vitrine">Sites Vitrine</a>
+        <a href="/services/#commerce">E-commerce</a>
+        <a href="/services/#refonte">Refonte stratégique</a>
+        <a href="/services/#seo">SEO & Performance</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -80,9 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Shinenows. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2025 ShineNows. Tous droits réservés.</div>
   </div>
 </footer>
 

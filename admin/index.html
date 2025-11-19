@@ -3,44 +3,72 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Espace réservé à l'équipe ShineNows.'>
-  <title>Admin | ShineNows</title>
+  <meta name='description' content='Espace interne ShineNows.'>
+  <title>ShineNows | Admin</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
 <body>
-<header class='glass-header'>
+<header class='header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/' class='logo-wrapper'>
+      <a href='/' class='logo'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
-      <nav>
+      <nav class='main-nav'>
         <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
       </nav>
-      <div class='language-selector'><span>FR</span> · <a href="/en/">EN</a> · <a href="/de/">DE</a></div>
-      <div class='mobile-menu'>☰</div>
+      <div class='lang-switch'><span>FR</span> · <a href='/en/'>EN</a> · <a href='/de/'>DE</a></div>
+      <button class='menu-toggle' aria-label='Menu'>☰</button>
     </div>
   </div>
 </header>
 <main>
-<section class='admin-section'>
+<section class='hero'>
   <div class='container'>
-    <h1>Admin Panel</h1>
-    <p style='color:var(--text-gray);'>Interface sécurisée réservée à l'équipe ShineNows.</p>
-    <div class='admin-panel'>
-      <form>
+    <div class='hero-content'>
+      <h1>Espace sécurisé ShineNows</h1>
+      <p>Interface confidentielle réservée à l’équipe interne.</p>
+      <div class='hero-actions'>
+        <a class='btn' href='/contact/'>Connexion sécurisée</a>
+        <a class='btn btn-outline' href='/'>Retour au site</a>
+      </div>
+      <ul class='hero-points'>
+        <li>Multilingue natif</li><li>SEO & performance inclus</li><li>Support senior dédié</li>
+      </ul>
+      <div class='stats'>
+        <div class='stat'><strong data-count='120'>0</strong><span>projets déployés</span></div><div class='stat'><strong data-count='98'>0</strong><span>% de satisfaction</span></div><div class='stat'><strong data-count='12'>0</strong><span>pays livrés</span></div>
+      </div>
+    </div>
+    <div class='hero-visual'>
+      <img src='/assets/images/logo/shineNews-hero.webp' alt='ShineNows hero'>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='contact-grid'>
+      <form class='form-grid' style='max-width:420px;'>
         <input type='email' placeholder='Email professionnel' required>
-        <input type='password' placeholder='Mot de passe'>
-        <button class='btn'>Connexion sécurisée</button>
+        <input type='password' placeholder='Mot de passe' required>
+        <button class='btn' type='submit'>Connexion</button>
       </form>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='cta-panel'>
+      <h2>Prêt à collaborer ?</h2>
+      <p style='color:var(--text-gray);margin:1rem 0 1.5rem;'>Expliquez votre ambition et recevez un plan précis sous 24h.</p>
+      <a class='btn' href='/devis/'>Planifier un échange</a>
     </div>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -49,11 +77,11 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="/services#hosting">Hébergement & Maintenance</a>
-        <a href="/services#vitrine">Sites Vitrine</a>
-        <a href="/services#ecommerce">E-commerce</a>
-        <a href="/services#refonte">Refonte de Site</a>
-        <a href="/services#seo">SEO & Performance</a>
+        <a href="/services/#hosting">Hébergement & Maintenance</a>
+        <a href="/services/#vitrine">Sites Vitrine</a>
+        <a href="/services/#commerce">E-commerce</a>
+        <a href="/services/#refonte">Refonte stratégique</a>
+        <a href="/services/#seo">SEO & Performance</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -66,9 +94,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Shinenows. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2025 ShineNows. Tous droits réservés.</div>
   </div>
 </footer>
 

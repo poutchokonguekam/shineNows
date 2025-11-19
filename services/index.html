@@ -3,93 +3,164 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Services web ShineNows : hébergement, vitrines, e-commerce, SEO et refonte.'>
-  <title>Services ShineNows</title>
+  <meta name='description' content='Services ShineNows : offres premium sans prix affichés.'>
+  <title>ShineNows | Services</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
 <body>
-<header class='glass-header'>
+<header class='header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/' class='logo-wrapper'>
+      <a href='/' class='logo'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
-      <nav>
+      <nav class='main-nav'>
         <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
       </nav>
-      <div class='language-selector'><span>FR</span> · <a href="/en/">EN</a> · <a href="/de/">DE</a></div>
-      <div class='mobile-menu'>☰</div>
+      <div class='lang-switch'><span>FR</span> · <a href='/services/en.html'>EN</a> · <a href='/services/de.html'>DE</a></div>
+      <button class='menu-toggle' aria-label='Menu'>☰</button>
     </div>
   </div>
 </header>
 <main>
-<section class='services-section'>
+<section class='hero'>
   <div class='container'>
-    <h1>Nos Services Web & Solutions Digitales</h1>
-    <p>Des prestations complètes pour transformer votre vision en réalité digitale.</p>
-    <div class='services-grid'>
+    <div class='hero-content'>
+      <h1>Des services web premium sans menu de prix</h1>
+      <p>Nos équipes alignent stratégie, design system et développement pour livrer un site unique.</p>
+      <div class='hero-actions'>
+        <a class='btn' href='/devis/'>Planifier un atelier</a>
+        <a class='btn btn-outline' href='/services/'>Consulter nos services</a>
+      </div>
+      <ul class='hero-points'>
+        <li>Multilingue natif</li><li>SEO & performance inclus</li><li>Support senior dédié</li>
+      </ul>
+      <div class='stats'>
+        <div class='stat'><strong data-count='120'>0</strong><span>projets déployés</span></div><div class='stat'><strong data-count='98'>0</strong><span>% de satisfaction</span></div><div class='stat'><strong data-count='12'>0</strong><span>pays livrés</span></div>
+      </div>
+    </div>
+    <div class='hero-visual'>
+      <img src='/assets/images/logo/shineNews-hero.webp' alt='ShineNows hero'>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Nos services web</h2>
+      <p>Des prestations qualitatives, sans grille de prix publique.</p>
+    </div>
+    <div class='cards-grid'>
       
-      <div class='service-card' id='hosting'>
-        <div class='card-icon'>🚀</div>
+      <div class='card'>
+        <div class='preview-icon'>🚀</div>
         <h3>Hébergement & Maintenance</h3>
-        <p>Solution clé en main pour garantir performance et sécurité continue</p>
-        <ul><li>Hébergement optimisé en Europe</li><li>Maintenance proactive et support direct</li><li>Sauvegardes quotidiennes et monitoring 24/7</li><li>SSL, pare-feu et audits de sécurité</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
+        <p>Surveillance proactive, mises à jour pilotées et support direct.</p>
       </div>
         
-      <div class='service-card' id='vitrine'>
-        <div class='card-icon'>💼</div>
-        <h3>Sites Vitrine Élégants</h3>
-        <p>Présence en ligne professionnelle qui reflète votre excellence</p>
-        <ul><li>Design exclusif et responsive</li><li>UX pensée pour la conversion</li><li>SEO technique inclus</li><li>Intégration CMS sur mesure</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
+      <div class='card'>
+        <div class='preview-icon'>💼</div>
+        <h3>Sites Vitrine</h3>
+        <p>Présence haut de gamme pour entrepreneurs et studios.</p>
       </div>
         
-      <div class='service-card' id='ecommerce'>
-        <div class='card-icon'>🛒</div>
-        <h3>Boutiques E-commerce</h3>
-        <p>Expériences d’achat fluides et évolutives</p>
-        <ul><li>Paiements sécurisés</li><li>Gestion de catalogue avancée</li><li>Automatisations marketing</li><li>Dashboards décisionnels</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
-      </div>
-        
-      <div class='service-card'>
-        <div class='card-icon'>📄</div>
-        <h3>Sites Multipages</h3>
-        <p>Parcours scénarisés pour convaincre investisseurs et prospects</p>
-        <ul><li>Stratégie éditoriale</li><li>Wireframes conversion</li><li>Styleguide complet</li><li>Formation équipes</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
-      </div>
-        
-      <div class='service-card' id='refonte'>
-        <div class='card-icon'>♻️</div>
-        <h3>Refonte Stratégique</h3>
-        <p>Donnez un nouvel élan à votre plateforme existante</p>
-        <ul><li>Audit global UX & SEO</li><li>Plan de migration sécurisée</li><li>Refonte modulaire</li><li>Accompagnement go-live</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
-      </div>
-        
-      <div class='service-card' id='seo'>
-        <div class='card-icon'>📈</div>
-        <h3>SEO & Performance</h3>
-        <p>Gagnez en visibilité et en vitesse sans compromettre le design</p>
-        <ul><li>Optimisation Core Web Vitals</li><li>Schema & tracking</li><li>Contenus evergreen</li><li>Tableaux de bord mensuels</li></ul>
-        <a href='/devis/' class='btn' style='margin-top:1rem;'>Discuter de cette solution</a>
+      <div class='card'>
+        <div class='preview-icon'>🛒</div>
+        <h3>E-commerce</h3>
+        <p>Boutiques fluides, sécurisées et prêtes à scaler.</p>
       </div>
         
     </div>
-    <div class='services-cta' style='text-align:center;margin-top:3rem;'>
-      <h2>Prêt à transformer votre vision ?</h2>
-      <p style='color:var(--text-gray);margin:0.5rem auto 1.5rem;'>Discutons de votre projet et concevons la feuille de route parfaite.</p>
-      <a href='/devis/' class='btn btn-primary'>Démarrer mon projet</a>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='cards-grid'>
+      
+      <div class='card' id='hosting'>
+        <div class='preview-icon'>🚀</div>
+        <h3>Hébergement & Maintenance</h3>
+        <ul><li>Monitoring 24/7</li><li>Sauvegardes quotidiennes</li><li>Audit sécurité</li><li>Support prioritaire</li></ul>
+      </div>
+        
+      <div class='card' id='vitrine'>
+        <div class='preview-icon'>💼</div>
+        <h3>Sites Vitrine Signature</h3>
+        <ul><li>Design system exclusif</li><li>UX orientée conversion</li><li>CMS flexible</li><li>Coaching contenu</li></ul>
+      </div>
+        
+      <div class='card' id='commerce'>
+        <div class='preview-icon'>🛒</div>
+        <h3>Boutiques E-commerce</h3>
+        <ul><li>Paiements sécurisés</li><li>Gestion catalogue</li><li>Automatisation marketing</li><li>Tableaux de bord</li></ul>
+      </div>
+        
+      <div class='card' id='seo'>
+        <div class='preview-icon'>📈</div>
+        <h3>SEO & Performance</h3>
+        <ul><li>Core Web Vitals</li><li>Schema & tracking</li><li>Stratégie éditoriale</li><li>Reporting mensuel</li></ul>
+      </div>
+        
+      <div class='card' id='refonte'>
+        <div class='preview-icon'>♻️</div>
+        <h3>Refonte Stratégique</h3>
+        <ul><li>Audit complet</li><li>Roadmap de migration</li><li>Tests QA</li><li>Coaching équipe</li></ul>
+      </div>
+        
+      <div class='card'>
+        <div class='preview-icon'>🤝</div>
+        <h3>Run & Care</h3>
+        <ul><li>Roadmap trimestrielle</li><li>Ateliers produit</li><li>A/B testing</li><li>Support Slack</li></ul>
+      </div>
+        
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2>Processus ShineNows</h2>
+      <p>Une méthode claire, pilotée par un lead senior.</p>
+    </div>
+    <div class='process-list'>
+      
+      <div class='process-item'>
+        <strong>01</strong>
+        <p>Immersion & vision</p>
+      </div>
+        
+      <div class='process-item'>
+        <strong>02</strong>
+        <p>Design system & UX</p>
+      </div>
+        
+      <div class='process-item'>
+        <strong>03</strong>
+        <p>Développement & QA</p>
+      </div>
+        
+      <div class='process-item'>
+        <strong>04</strong>
+        <p>Run & Croissance</p>
+      </div>
+        
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container'>
+    <div class='cta-panel'>
+      <h2>Prêt à collaborer ?</h2>
+      <p style='color:var(--text-gray);margin:1rem 0 1.5rem;'>Expliquez votre ambition et recevez un plan précis sous 24h.</p>
+      <a class='btn' href='/devis/'>Planifier un échange</a>
     </div>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -98,11 +169,11 @@
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="/services#hosting">Hébergement & Maintenance</a>
-        <a href="/services#vitrine">Sites Vitrine</a>
-        <a href="/services#ecommerce">E-commerce</a>
-        <a href="/services#refonte">Refonte de Site</a>
-        <a href="/services#seo">SEO & Performance</a>
+        <a href="/services/#hosting">Hébergement & Maintenance</a>
+        <a href="/services/#vitrine">Sites Vitrine</a>
+        <a href="/services/#commerce">E-commerce</a>
+        <a href="/services/#refonte">Refonte stratégique</a>
+        <a href="/services/#seo">SEO & Performance</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
@@ -115,9 +186,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2025 Shinenows. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">© 2025 ShineNows. Tous droits réservés.</div>
   </div>
 </footer>
 

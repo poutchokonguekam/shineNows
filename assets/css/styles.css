@@ -55,7 +55,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   padding: 1rem 0;
 }
@@ -66,11 +66,8 @@ main {
   gap: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-}
-
-.logo img {
-  width: 42px;
-  height: auto;
+  flex: 0 0 auto;
+  color: var(--text-light);
 }
 
 .logo-icon {
@@ -78,42 +75,102 @@ main {
   height: auto;
 }
 
-.main-nav {
-  display: flex;
-  gap: 1.25rem;
-  font-weight: 500;
-  flex-wrap: wrap;
+.logo-text {
+  font-size: 1.1rem;
 }
 
-.main-nav a {
+.nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
   color: var(--text-gray);
   transition: color 0.2s ease;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+.nav-list a:hover {
   color: var(--light-gold);
 }
 
-.nav {
+.language-switcher {
+  position: relative;
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 0 0 auto;
+  margin-left: 1rem;
 }
 
-.lang-switch {
-  font-size: 0.9rem;
-  color: var(--text-gray);
-}
-
-.lang-switch span {
+.language-toggle {
+  border: 1px solid var(--border-light);
+  background: transparent;
   color: var(--text-light);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
   font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.menu-toggle {
-  width: 40px;
-  height: 40px;
+.language-toggle:focus-visible,
+.language-menu button:focus-visible {
+  outline: 2px solid var(--light-gold);
+  outline-offset: 2px;
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--slate-blue);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 0.35rem;
+  display: none;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 20;
+}
+
+.language-switcher.open .language-menu {
+  display: flex;
+}
+
+.language-menu button {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  text-align: left;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.language-menu button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-toggle {
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
   border: 1px solid var(--border-light);
   background: transparent;
@@ -122,6 +179,15 @@ main {
   display: none;
   align-items: center;
   justify-content: center;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.mobile-toggle span {
+  width: 18px;
+  height: 2px;
+  background: var(--text-light);
+  display: block;
 }
 
 .language-switcher {
@@ -466,34 +532,40 @@ textarea {
   background: radial-gradient(circle at top, rgba(212, 175, 55, 0.1), rgba(10, 15, 31, 0.95));
 }
 
-@media (max-width: 900px) {
-  .main-nav {
-    position: absolute;
-    top: 80px;
-    right: 16px;
-    flex-direction: column;
-    background: rgba(10, 15, 31, 0.98);
-    padding: 1.5rem;
-    border-radius: 18px;
+@media (max-width: 1023px) {
+  .nav {
     display: none;
-    width: min(260px, 80vw);
+    width: 100%;
   }
-  .main-nav.active {
+  .language-switcher {
+    display: none;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .mobile-toggle {
     display: flex;
   }
-  .menu-toggle {
-    display: inline-flex;
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+  body.menu-open .nav {
+    display: flex;
+    width: 100%;
+  }
+  body.menu-open .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+  body.menu-open .language-switcher {
+    display: flex;
+    margin-top: 1rem;
+  }
+  body.menu-open .header-inner {
+    flex-wrap: wrap;
   }
   .stats {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-  .mobile-toggle {
-    display: block;
   }
 }

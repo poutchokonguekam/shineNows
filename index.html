@@ -10,18 +10,37 @@
   <link rel='stylesheet' href='assets/css/styles.css'>
 </head>
 <body>
-<header class='header'>
-  <div class='container'>
-    <div class='header-inner'>
-      <a href='/' class='logo'>
-        <img src='assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
-        <span>ShineNows</span>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="assets/images/logo/shineNews-logo.webp" alt="ShineNows" class="logo-icon">
+        <span class="logo-text">ShineNows</span>
       </a>
-      <nav class='main-nav'>
-        <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="/services">Services</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/devis">Devis</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </nav>
-      <div class='lang-switch'><span>FR</span> · <a href='/en/'>EN</a> · <a href='/de/'>DE</a></div>
-      <button class='menu-toggle' aria-label='Menu'>☰</button>
+      <div class="language-switcher">
+        <button class="language-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+          <span class="language-active">FR</span>
+        </button>
+        <div class="language-menu" role="menu">
+          <button type="button" data-lang="fr">FR</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+      </div>
+      <button class="mobile-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </header>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang='fr'>
+<html lang='de'>
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Formulaire de devis ShineNows pour cadrer votre projet.'>
-  <title>Demande de devis ShineNows</title>
+  <meta name='description' content='Projektbriefing für ShineNows.'>
+  <title>Projektbrief | ShineNows</title>
   <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
   <link rel='stylesheet' href='/assets/css/styles.css'>
 </head>
@@ -12,14 +12,14 @@
 <header class='glass-header'>
   <div class='container'>
     <div class='header-inner'>
-      <a href='/' class='logo-wrapper'>
+      <a href='/de/' class='logo-wrapper'>
         <img src='/assets/images/logo/shineNews-logo.webp' alt='ShineNows'>
         <span>ShineNows</span>
       </a>
       <nav>
-        <a href='/'>Accueil</a><a href='/services/'>Services</a><a href='/portfolio/'>Réalisations</a><a href='/blog/'>Blog</a><a href='/devis/'>Devis</a><a href='/contact/'>Contact</a>
+        <a href='/de/'>Start</a><a href='/services/de.html'>Leistungen</a><a href='/portfolio/de.html'>Referenzen</a><a href='/blog/de/'>Blog</a><a href='/devis/de.html'>Angebot</a><a href='/contact/de.html'>Kontakt</a>
       </nav>
-      <div class='language-selector'><span>FR</span> · <a href="/en/">EN</a> · <a href="/de/">DE</a></div>
+      <div class='language-selector'><a href="/">FR</a> · <a href="/en/">EN</a> · <span>DE</span></div>
       <div class='mobile-menu'>☰</div>
     </div>
   </div>
@@ -27,39 +27,39 @@
 <main>
 <section class='devis-section'>
   <div class='container'>
-    <h1>Parlons de votre prochain site</h1>
-    <p>Remplissez ce brief détaillé pour une proposition sur mesure.</p>
+    <h1>Sprechen wir über Ihr nächstes Projekt</h1>
+    <p>Füllen Sie dieses Briefing für ein passendes Angebot aus.</p>
     <form id='devis-form'>
       <div class='form-section'>
-        <h3>Informations générales</h3>
+        <h3>Allgemeine Angaben</h3>
         <input type='text' name='nom' placeholder='Nom & Prénom' required>
         <input type='email' name='email' placeholder='Email' required>
         <input type='tel' name='telephone' placeholder='Téléphone'>
       </div>
       <div class='form-section'>
-        <h3>Type de projet</h3>
+        <h3>Projektart</h3>
         <div class='checkbox-group'>
-          <label><input type='checkbox' name='type[]' value='Site vitrine'> Site vitrine</label><label><input type='checkbox' name='type[]' value='E-commerce'> E-commerce</label><label><input type='checkbox' name='type[]' value='Refonte'> Refonte</label>
+          <label><input type='checkbox' name='type[]' value='Vitrine'> Vitrine</label><label><input type='checkbox' name='type[]' value='E-Commerce'> E-Commerce</label><label><input type='checkbox' name='type[]' value='Relaunch'> Relaunch</label>
         </div>
       </div>
       <div class='form-section'>
-        <h3>Hébergement & Maintenance</h3>
+        <h3>Hosting & Betreuung</h3>
         <div class='radio-group'>
-          <label><input type='radio' name='hosting' value='Essentiel'> Essentiel</label><label><input type='radio' name='hosting' value='Professionnel'> Professionnel</label><label><input type='radio' name='hosting' value='Enterprise'> Enterprise</label><label><input type='radio' name='hosting' value='Pas d'hébergement'> Pas d'hébergement</label>
+          <label><input type='radio' name='hosting' value='Essential'> Essential</label><label><input type='radio' name='hosting' value='Professional'> Professional</label><label><input type='radio' name='hosting' value='Enterprise'> Enterprise</label><label><input type='radio' name='hosting' value='Kein Hosting'> Kein Hosting</label>
         </div>
       </div>
       <div class='form-section'>
-        <h3>Budget approximatif</h3>
+        <h3>Budgetrahmen</h3>
         <select name='budget'>
           <option value=''>--</option>
-          <option value='1 000 - 2 000 €'>1 000 - 2 000 €</option><option value='2 000 - 5 000 €'>2 000 - 5 000 €</option><option value='5 000 - 10 000 €'>5 000 - 10 000 €</option><option value='+ 10 000 €'>+ 10 000 €</option>
+          <option value='1 000 - 2 000 €'>1 000 - 2 000 €</option><option value='2 000 - 5 000 €'>2 000 - 5 000 €</option><option value='5 000 - 10 000 €'>5 000 - 10 000 €</option><option value='über 10 000 €'>über 10 000 €</option>
         </select>
       </div>
       <div class='form-section'>
-        <textarea name='details' placeholder='Parlez-nous de votre projet' required></textarea>
+        <textarea name='details' placeholder='Erzählen Sie uns vom Projekt' required></textarea>
       </div>
-      <button type='submit' class='btn btn-primary'>Envoyer ma demande</button>
-      <button type='button' id='download-brief' class='btn btn-secondary'>Télécharger mon brief</button>
+      <button type='submit' class='btn btn-primary'>Anfrage senden</button>
+      <button type='button' id='download-brief' class='btn btn-secondary'>Brief herunterladen</button>
     </form>
   </div>
 </section>

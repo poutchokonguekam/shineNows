@@ -279,10 +279,6 @@ main {
   opacity: 1;
 }
 
-.project-overlay p {
-  color: var(--text-light);
-}
-
 .blog-card {
   border: 1px solid var(--border-light);
   border-radius: 20px;
@@ -324,7 +320,7 @@ main {
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
 }
 
-.btn-outline {
+.btn.btn-outline {
   background: transparent;
   color: var(--text-light);
   border: 1px solid var(--border-light);

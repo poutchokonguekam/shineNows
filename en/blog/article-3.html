@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='Practical tips and lessons learned from professional website launches.'>
+  <title>ShineNows blog</title>
+  <link rel='stylesheet' href='/assets/css/styles.css'>
+  <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp'>
+  <link rel='icon' type='image/webp' href='/assets/images/logo/favicon.webp.webp'>
+</head>
+<body>
+<header class='site-header'>
+  <div class='container header-inner'>
+    <a class='brand' href='/en/'>
+      <img src='/assets/images/logo/shineNows-logo-long.webp.webp' alt='ShineNows logo' />
+    </a>
+    <nav class='primary-nav' id='primary-nav'>
+      <a href='/en/'>Home</a><a href='/en/services/'>Services</a><a href='/en/portfolio/'>Portfolio</a><a href='/en/blog/'>Blog</a><a href='/en/devis/'>Quote</a><a href='/en/contact/'>Contact</a>
+      <a class='btn btn-small' href='/en/devis/'>Quote</a>
+    </nav>
+    <div class='header-tools'>
+      <div class='lang-switcher'><a href='/' class=''>FR</a><a href='/en/' class='active'>EN</a><a href='/de/' class=''>DE</a></div>
+      <button class='nav-toggle' aria-label='Toggle navigation' aria-expanded='false'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+<section class='hero article-hero'>
+  <div class='container hero-grid'>
+    <div class='hero-content'>
+      <p class='hero-tag'>Article</p>
+      <h1>Automate lead follow-up</h1>
+      <p class='hero-subtitle'>Connect forms, CRM and reminders so no opportunity slips away.</p>
+      <a class='btn ghost' href='/en/blog/'>← Blog</a>
+    </div>
+    <div class='hero-media'>
+      <img src='/assets/images/logo/project-02.webp.webp' alt='Automate lead follow-up'>
+    </div>
+  </div>
+</section>
+<section class='section'>
+  <div class='container article-body'>
+    <p>Centralize every form submission in a CRM and tag the source.</p><p>Set up a short email sequence to pre-qualify automatically.</p><p>Use WhatsApp Business for hot requests where speed is critical.</p><p>Review responses to adjust your commercial narrative.</p>
+    <a class='btn' href='/en/blog/'>Back to blog</a>
+  </div>
+</section>
+</main>
+<div class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-brand">
+      <img src="/assets/images/logo/shineNows-logo-long.webp" class="footer-logo">
+      <p>Créateur de sites modernes, efficaces et personnalisés pour entrepreneurs, indépendants et petites entreprises.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/services/">Site Vitrine</a></li>
+        <li><a href="/services/">Site e-commerce</a></li>
+        <li><a href="/services/">Site Multipage</a></li>
+        <li><a href="/services/">Site sur Mesure</a></li>
+        <li><a href="/services/">Refonte de Site</a></li>
+        <li><a href="/services/">Maintenance & Sécurité</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Tel : +49 157 38 30 60 56</p>
+      <p>Email : infos@shinenows.com</p>
+
+      <div class="footer-socials">
+        <a><img src="/assets/images/logo/facebook.png"></a>
+        <a><img src="/assets/images/logo/instagram.png"></a>
+        <a><img src="/assets/images/logo/whatsapp.png"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">© 2025 Shinenows. Tous droits réservés.</div>
+</div>
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNav = document.getElementById('primary-nav');
+if (navToggle && primaryNav) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    primaryNav.classList.toggle('open');
+  });
+}
+</script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const supportedLangs = ['fr', 'en', 'de'];
   const labels = { fr: 'FR', en: 'EN', de: 'DE' };
+  const localeHome = { fr: '/', en: '/en/', de: '/de/' };
   const navConfig = {
     fr: [
       { label: 'Accueil', href: '/' },
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { label: 'Services', href: '/en/services' },
       { label: 'Work', href: '/en/portfolio' },
       { label: 'Blog', href: '/en/blog' },
-      { label: 'Quote', href: '/en/quote' },
+      { label: 'Quote', href: '/en/devis' },
       { label: 'Contact', href: '/en/contact' }
     ],
     de: [
@@ -23,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
       { label: 'Leistungen', href: '/de/services' },
       { label: 'Referenzen', href: '/de/portfolio' },
       { label: 'Blog', href: '/de/blog' },
-      { label: 'Angebot', href: '/de/angebot' },
-      { label: 'Kontakt', href: '/de/kontakt' }
+      { label: 'Angebot', href: '/de/devis' },
+      { label: 'Kontakt', href: '/de/contact' }
     ]
   };
 
@@ -37,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const browserLang = (navigator.language || navigator.userLanguage || 'fr').slice(0, 2).toLowerCase();
   const htmlLang = document.documentElement.lang?.slice(0, 2).toLowerCase();
-  let activeLang = supportedLangs.includes(browserLang)
-    ? browserLang
-    : (supportedLangs.includes(htmlLang) ? htmlLang : 'fr');
+  let activeLang = supportedLangs.includes(htmlLang)
+    ? htmlLang
+    : (supportedLangs.includes(browserLang) ? browserLang : 'fr');
 
   const renderNav = (lang) => {
     if (!navList) return;
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   };
 
-  const setLanguage = (lang) => {
+  const setLanguage = (lang, navigate) => {
     if (!supportedLangs.includes(lang)) return;
     activeLang = lang;
     renderNav(activeLang);
@@ -64,13 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (langCurrent) {
       langCurrent.textContent = labels[activeLang];
     }
+    if (navigate) {
+      window.location.href = localeHome[lang];
+    }
   };
 
-  renderNav(activeLang);
-  renderDropdown();
-  if (langCurrent) {
-    langCurrent.textContent = labels[activeLang];
-  }
+  setLanguage(activeLang, false);
 
   langCurrent?.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const link = event.target.closest('a[data-lang]');
     if (!link) return;
     event.preventDefault();
-    setLanguage(link.dataset.lang);
     languageSwitcher.classList.remove('open');
     langCurrent?.setAttribute('aria-expanded', 'false');
+    setLanguage(link.dataset.lang, true);
   });
 
   document.addEventListener('click', (event) => {
@@ -109,6 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerBtn?.setAttribute('aria-expanded', 'false');
     }
   });
+
+  const slider = document.querySelector('.hero-slider');
+  if (slider) {
+    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    const dotsContainer = slider.querySelector('.hero-slider-dots');
+    let current = 0;
+    const goTo = (index) => {
+      slides[current].classList.remove('is-active');
+      dotsContainer.children[current].classList.remove('is-active');
+      current = index;
+      slides[current].classList.add('is-active');
+      dotsContainer.children[current].classList.add('is-active');
+    };
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.addEventListener('click', () => goTo(idx));
+      if (idx === 0) dot.classList.add('is-active');
+      dotsContainer.appendChild(dot);
+    });
+    let timer = setInterval(() => goTo((current + 1) % slides.length), 5000);
+    slider.addEventListener('mouseenter', () => clearInterval(timer));
+    slider.addEventListener('mouseleave', () => (timer = setInterval(() => goTo((current + 1) % slides.length), 5000)));
+  }
 
   document.querySelectorAll('[data-count]').forEach((el) => {
     const target = parseInt(el.dataset.count, 10);

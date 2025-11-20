@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const supportedLangs = ['fr', 'en', 'de'];
+  const labels = { fr: 'FR', en: 'EN', de: 'DE' };
   const navConfig = {
     fr: [
       { label: 'Accueil', href: '/' },
@@ -27,13 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
   };
 
+  const body = document.body;
   const navList = document.querySelector('.nav-list');
   const languageSwitcher = document.querySelector('.language-switcher');
-  const languageToggle = languageSwitcher?.querySelector('.language-toggle');
-  const languageMenu = languageSwitcher?.querySelector('.language-menu');
-  const languageActive = languageSwitcher?.querySelector('.language-active');
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const body = document.body;
+  const langCurrent = languageSwitcher?.querySelector('.lang-current');
+  const langDropdown = languageSwitcher?.querySelector('.lang-dropdown');
+  const burgerBtn = document.querySelector('.burger-btn');
 
   const browserLang = (navigator.language || navigator.userLanguage || 'fr').slice(0, 2).toLowerCase();
   const htmlLang = document.documentElement.lang?.slice(0, 2).toLowerCase();
@@ -48,58 +48,65 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   };
 
-  const updateLanguageMenu = () => {
-    if (!languageSwitcher) return;
-    languageActive.textContent = activeLang.toUpperCase();
-    languageMenu?.querySelectorAll('[data-lang]').forEach((btn) => {
-      btn.hidden = btn.dataset.lang === activeLang;
-    });
+  const renderDropdown = () => {
+    if (!langDropdown) return;
+    langDropdown.innerHTML = supportedLangs
+      .filter((code) => code !== activeLang)
+      .map((code) => `<a href="#" data-lang="${code}">${labels[code]}</a>`)
+      .join('');
   };
 
   const setLanguage = (lang) => {
     if (!supportedLangs.includes(lang)) return;
     activeLang = lang;
     renderNav(activeLang);
-    updateLanguageMenu();
+    renderDropdown();
+    if (langCurrent) {
+      langCurrent.textContent = labels[activeLang];
+    }
   };
 
   renderNav(activeLang);
-  updateLanguageMenu();
+  renderDropdown();
+  if (langCurrent) {
+    langCurrent.textContent = labels[activeLang];
+  }
 
-  languageToggle?.addEventListener('click', (event) => {
+  langCurrent?.addEventListener('click', (event) => {
     event.stopPropagation();
     const expanded = languageSwitcher.classList.toggle('open');
-    languageToggle.setAttribute('aria-expanded', expanded);
+    langCurrent.setAttribute('aria-expanded', String(expanded));
   });
 
-  languageMenu?.addEventListener('click', (event) => {
-    const btn = event.target.closest('[data-lang]');
-    if (!btn) return;
-    setLanguage(btn.dataset.lang);
+  langDropdown?.addEventListener('click', (event) => {
+    const link = event.target.closest('a[data-lang]');
+    if (!link) return;
+    event.preventDefault();
+    setLanguage(link.dataset.lang);
     languageSwitcher.classList.remove('open');
-    languageToggle?.setAttribute('aria-expanded', 'false');
+    langCurrent?.setAttribute('aria-expanded', 'false');
   });
 
   document.addEventListener('click', (event) => {
     if (languageSwitcher && !languageSwitcher.contains(event.target)) {
       languageSwitcher.classList.remove('open');
-      languageToggle?.setAttribute('aria-expanded', 'false');
+      langCurrent?.setAttribute('aria-expanded', 'false');
     }
   });
 
-  mobileToggle?.addEventListener('click', () => {
-    const isOpen = body.classList.toggle('menu-open');
-    mobileToggle.setAttribute('aria-expanded', String(isOpen));
-    if (!isOpen) {
+  burgerBtn?.addEventListener('click', () => {
+    const open = body.classList.toggle('menu-open');
+    burgerBtn.setAttribute('aria-expanded', String(open));
+    if (!open) {
       languageSwitcher?.classList.remove('open');
-      languageToggle?.setAttribute('aria-expanded', 'false');
+      langCurrent?.setAttribute('aria-expanded', 'false');
     }
   });
 
   navList?.addEventListener('click', (event) => {
     if (event.target.closest('a') && body.classList.contains('menu-open')) {
       body.classList.remove('menu-open');
-      mobileToggle?.setAttribute('aria-expanded', 'false');
+      burgerBtn?.setAttribute('aria-expanded', 'false');
     }
   });
 
